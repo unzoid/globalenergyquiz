@@ -224,7 +224,7 @@ export default function SubmitPage() {
         <Button  plain href='/'>
             <ArrowLeftIcon/> Back to Home
           </Button>
-          <Button  plain href='/submit'>
+          <Button  plain href='/leaderboard'>
             View Leaderboard
           </Button>
         </div>
