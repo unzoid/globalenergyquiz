@@ -9,7 +9,7 @@ export const mockStudents: Student[] = [
     email: 'emma.j@school.edu',
     class: 'TTO2',
     points: 120,
-    createdAt: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
+    created_at: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ export const mockStudents: Student[] = [
     email: 'liam.s@school.edu',
     class: 'TTO2',
     points: 95,
-    createdAt: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
+    created_at: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
   },
   {
     id: '3',
@@ -25,7 +25,7 @@ export const mockStudents: Student[] = [
     email: 'olivia.b@school.edu',
     class: 'TTO3',
     points: 150,
-    createdAt: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
+    created_at: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
   },
   {
     id: '4',
@@ -33,7 +33,7 @@ export const mockStudents: Student[] = [
     email: 'noah.d@school.edu',
     class: 'TTO3',
     points: 110,
-    createdAt: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
+    created_at: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
   },
   {
     id: '5',
@@ -41,7 +41,7 @@ export const mockStudents: Student[] = [
     email: 'sophia.w@school.edu',
     class: 'TTO2',
     points: 135,
-    createdAt: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
+    created_at: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
   },
   {
     id: '6',
@@ -49,12 +49,12 @@ export const mockStudents: Student[] = [
     email: 'jackson.m@school.edu',
     class: 'TTO3',
     points: 85,
-    createdAt: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
+    created_at: new Date(2023, 7, 1).toISOString() // August 1, 2023 (months are 0-indexed)
   }
 ];
 
 // Helper function to generate random answers for a given week
-const generateRandomAnswers = (studentId: string, weekNumber: number) => {
+const generateRandomAnswers = (student_id: string, week_number: number) => {
   const answers = questions.map(question => {
     let answer: string | number;
     let points = 0;
@@ -73,21 +73,21 @@ const generateRandomAnswers = (studentId: string, weekNumber: number) => {
     }
     
     return {
-      questionId: question.id,
+      question_id: question.id,
       answer,
       points
     };
   });
   
-  const totalPoints = answers.reduce((sum, answer) => sum + answer.points, 0);
+  const total_points = answers.reduce((sum, answer) => sum + answer.points, 0);
   
   return {
-    id: `${studentId}-week${weekNumber}`,
-    studentId,
-    weekNumber,
+    id: `${student_id}-week${week_number}`,
+    student_id,
+    week_number,
     answers,
-    totalPoints,
-    createdAt: new Date(2023, 7, weekNumber * 7).toISOString() // August (months are 0-indexed)
+    total_points,
+    created_at: new Date(2023, 7, week_number * 7).toISOString() // August (months are 0-indexed)
   };
 };
 
@@ -104,20 +104,20 @@ mockStudents.forEach(student => {
 export const mockLeaderboards: WeeklyLeaderboard[] = [];
 
 for (let week = 1; week <= 3; week++) {
-  const weeklySubmissions = mockSubmissions.filter(sub => sub.weekNumber === week);
+  const weeklySubmissions = mockSubmissions.filter(sub => sub.week_number === week);
   
   const rankings = weeklySubmissions.map(sub => {
-    const student = mockStudents.find(s => s.id === sub.studentId);
+    const student = mockStudents.find(s => s.id === sub.student_id);
     return {
-      studentId: sub.studentId,
-      studentName: student?.name || 'Unknown Student',
-      points: sub.totalPoints,
+      student_id: sub.student_id,
+      student_name: student?.name || 'Unknown Student',
+      points: sub.total_points,
       class: student?.class || 'Unknown Class'
     };
   }).sort((a, b) => b.points - a.points);
   
   mockLeaderboards.push({
-    weekNumber: week,
+    week_number: week,
     rankings
   });
 }
