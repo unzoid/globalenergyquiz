@@ -208,9 +208,7 @@ export default function SubmitPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button color="green">
-              <Link href="/leaderboard">View Leaderboard</Link>
-            </Button>
+            <Button color="green" href="/leaderboard/">View Leaderboard</Button>
           </motion.div>
         </motion.div>
       </div>
@@ -221,10 +219,10 @@ export default function SubmitPage() {
     <div className="min-h-screen py-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="mb-8 flex justify-between items-center">
-        <Button  plain href='/'>
+        <Button plain href='/'>
             <ArrowLeftIcon/> Back to Home
           </Button>
-          <Button  plain href='/leaderboard'>
+          <Button plain href='/leaderboard/'>
             View Leaderboard
           </Button>
         </div>

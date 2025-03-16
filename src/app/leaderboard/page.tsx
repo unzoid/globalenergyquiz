@@ -91,7 +91,7 @@ export default function LeaderboardPage() {
           <Button  plain href='/'>
             <ArrowLeftIcon/> Back to Home
           </Button>
-          <Button  plain href='/submit'>
+          <Button  plain href='/submit/'>
             Submit New Entry
           </Button>
         </div>
