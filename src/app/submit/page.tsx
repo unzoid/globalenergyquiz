@@ -11,7 +11,7 @@ import { Heading } from '@/components/heading';
 import { Text } from '@/components/text';
 import { Button } from '@/components/button';
 import { Input } from '@/components/input';
-import { Listbox, ListboxLabel, ListboxOption } from '@/components/listbox';
+import { Listbox, ListboxOption } from '@/components/listbox';
 import { Checkbox } from '@/components/checkbox';
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 
@@ -301,7 +301,7 @@ export default function SubmitPage() {
                   color="blue"
                 />
                 <label className="ml-2" htmlFor="anonymous">
-                  Submit anonymously (your name won't appear on the leaderboard)
+                  Submit anonymously (your name won&apos;t appear on the leaderboard)
                 </label>
               </div>
             </div>

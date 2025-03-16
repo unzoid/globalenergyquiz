@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import supabase from '@/lib/supabase';
 import { WeeklyLeaderboard } from '@/lib/types';
 import { Heading, Subheading } from '@/components/heading';
@@ -37,8 +36,8 @@ export default function LeaderboardPage() {
         
         submissions?.forEach(submission => {
           const weekNum = submission.week_number;
-          // Cast the students object to any to access its properties
-          const student = submission.students as any;
+          // Replace any with a more specific type
+          const student = submission.students as { name?: string; class?: string };
           
           if (!weeklyData[weekNum]) {
             weeklyData[weekNum] = {
@@ -99,7 +98,7 @@ export default function LeaderboardPage() {
 
         <div className="p-8">
           <Heading level={1} className="mb-2 text-center">Energy Challenge Leaderboard</Heading>
-          <Text className="mb-8 text-center">See who's leading in energy conservation!</Text>
+          <Text className="mb-8 text-center">See who&apos;s leading in energy conservation!</Text>
 
           <div className="flex flex-col md:flex-row justify-between mb-8 space-y-4 md:space-y-0">
             <div>
