@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen font-sans">
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-16">
-          <Heading level={1} className="mb-4">Unzoid Energy Challenge</Heading>
+          <Heading level={1} className="mb-4">Grotius Energy Challenge</Heading>
           <Text className="max-w-3xl mx-auto">
             Join the 4-week challenge to reduce energy consumption and compete with your classmates!
           </Text>
