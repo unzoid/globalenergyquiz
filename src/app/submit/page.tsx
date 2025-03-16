@@ -27,7 +27,7 @@ export default function SubmitPage() {
   const [error, setError] = useState('');
   const [isAnonymous, setIsAnonymous] = useState(false);
 
-  // Initialize answers with empty values
+  // Initialize answers with empty valuess
   useEffect(() => {
     const initialAnswers = questions.map(q => ({
       question_id: q.id,
