@@ -28,7 +28,7 @@ export default function Home() {
             <Text className="mb-6">
               Answer weekly questions about your energy-saving habits and earn points for sustainable actions.
             </Text>
-            <Button href="/submit/">Start Now</Button>
+            <Button color="indigo" href="/submit/">Start Now</Button>
           </div>
 
           <div className="p-8 flex flex-col items-center text-center">
@@ -44,7 +44,7 @@ export default function Home() {
             <Text className="mb-6">
               See how you rank against other TTO students and track your progress throughout the challenge.
             </Text>
-            <Button href="/leaderboard/">Check Rankings</Button>
+            <Button color="indigo" href="/leaderboard/">Check Rankings</Button>
           </div>
         </div>
 
