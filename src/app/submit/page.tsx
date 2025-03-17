@@ -297,7 +297,7 @@ export default function SubmitPage() {
                   onChange={(checked) => setIsAnonymous(checked)}
                   color="blue"
                 />
-                <label className="ml-2" htmlFor="anonymous">
+                <label className="ml-2" htmlFor="anonymous" color="indigo">
                   Submit anonymously (your name won&apos;t appear on the leaderboard)
                 </label>
               </div>
