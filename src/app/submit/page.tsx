@@ -285,9 +285,6 @@ export default function SubmitPage() {
                   onChange={(value) => setWeekNumber(Number(value))}
                 >
                   <ListboxOption value="1">Week 1</ListboxOption>
-                  <ListboxOption value="2">Week 2</ListboxOption>
-                  <ListboxOption value="3">Week 3</ListboxOption>
-                  <ListboxOption value="4">Week 4</ListboxOption>
                 </Listbox>
               </div>
               <div className="flex items-center col-span-2">
