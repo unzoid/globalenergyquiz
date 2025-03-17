@@ -10,7 +10,7 @@ export const questions: Question[] = [
   },
   {
     id: 2,
-    text: 'Which energy-saving actions did you take this week? (Select all that apply)',
+    text: 'Which energy-saving actions did you take this week?',
     type: 'multiple-choice',
     options: [
       'Used public transportation instead of car',
