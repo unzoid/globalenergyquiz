@@ -6,7 +6,7 @@ export const questions: Question[] = [
     id: 1,
     text: 'How many times this week did you turn off lights when leaving a room?',
     type: 'input',
-    pointsPerUnit: 5
+    pointsPerUnit: 0.5
   },
   {
     id: 2,
